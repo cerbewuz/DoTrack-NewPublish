@@ -1,0 +1,337 @@
+.modalwrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    padding-top: 50px;
+    width:100%;
+    height: 100vh;
+    // width:100%;
+    // height:100%;
+    // z-index: 2000;
+    // position:fixed;
+    // padding-top: 50px;
+    // justify-content: center;
+    // display: none;
+
+   
+ 
+
+
+    .card-white {
+        background-color: white;
+        border-radius: 5px;
+        width: 680px;
+        height: 550px;
+        margin: 10px;
+
+        .card-white-flex {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+
+            .card-heading {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                height: 10%;
+                border-bottom: 1px solid black;
+
+                .heading-compose {
+                    width: 100%;
+                    height: 100%;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    gap: 5px;
+
+                    img {
+
+                        width: 30px;
+                        height: 28px;
+                        border-radius: 50%;
+                    }
+
+                    h4 {
+                        font-family: "Montserrat";
+                    }
+                }
+
+            }
+
+            .card-body {
+                height: 80%;
+
+                .card-flex-body {
+                    height: 100%;
+                    width: 100%;
+
+                    .item {
+                        height: 25%;
+                        width: 100%;
+                        border-bottom: 1px solid black;
+                        display: flex;
+                        gap: 30px;
+                        padding: 20px;
+
+
+                        // 1111111111111111111111
+                        .div-item-tofrom-wrapper {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            width: 50%;
+
+                            .div-send{
+                                justify-content: center;
+                                align-items: flex-start;
+                                display: flex;
+                                flex-direction: column;
+                                padding: 5px;
+                                gap: 5px;
+
+
+                                .from{
+
+                                    label {
+                                        font-weight: bold;
+                                        
+
+                                    }
+    
+                                    input {
+                                        border-radius: 5px;
+                                        height: 25px;
+                                        padding-left: 10px;
+                                        caret-color: #5C469C;
+                                        width: 250px;
+                                    }
+                                }
+
+                                .to{
+                                    padding-left: 21px;
+                                    label {
+                                        font-weight: bold;
+                                        
+                                    }
+    
+                                    input {
+                                        border-radius: 5px;
+                                        height: 25px;
+                                        padding-left: 10px;
+                                        caret-color: #5C469C;
+                                        width: 250px;
+
+                                    }
+                                }
+
+                            }
+                            
+                        }
+
+                        // 22222222222222222222222
+                        .div-item-subdes-wrapper {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+
+
+                            .div-subdes {
+                                display: flex;
+                                padding: 5px;
+                                gap: 5px;
+
+
+                                label {
+                                    font-weight: bold;
+                                }
+
+                                input {
+                                    border-radius: 5px;
+                                    height: 25px;
+                                    padding-left: 10px;
+                                    caret-color: #5C469C;
+
+                                }
+                            }
+
+                        }
+
+
+
+                        // 3333333333333333333333333333333333333
+                        .div-item-categ-wrapper {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+
+                            .div-item-categ-wrapper-1 {
+                                display: flex;
+
+                                .div-file-categ {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-items: flex-start;
+                                    gap: 68px;
+
+                                    .div-file {
+                                        display: flex;
+                                        gap: 10px;
+                                        align-items: center;
+
+                                        label {
+                                            font-weight: bold;
+                                        }
+
+                                        select {
+                                            border-radius: 5px;
+                                            height: 25px;
+                                            padding-left: 10px;
+                                        }
+
+                                    }
+                                }
+                            }
+
+
+                            .div-file-categ-1 {
+                                display: flex;
+                                margin-top: 15px;
+
+                                .div-file-1 {
+                                    display: flex;
+                                    justify-content: space-evenly;
+                                    gap: 10px;
+                                    align-items: center;
+
+                                    label {
+                                        font-weight: bold;
+                                    }
+
+                                    select {
+                                        border-radius: 5px;
+                                        height: 25px;
+                                        padding-left: 10px;
+                                    }
+                                }
+                            }
+                        }
+
+
+
+                        // 444444444444444444444444444444444444444444444444444444444
+                        .div-item-4-wrapper {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+
+
+
+                            .div-deadline-wrapper {
+                                display: flex;
+                                justify-content: space-evenly;
+                                gap: 15px;
+
+                                .div-deadline {
+                                    display: flex;
+                                    flex-direction: column;
+                                    width: 50%;
+
+                                    label {
+                                        font-weight: bold;
+                                    }
+
+                                    select {
+                                        border-radius: 5px;
+                                        border: 1.5px solid black;
+                                        height: 25px;
+                                        padding-left: 10px;
+                                    }
+
+                                    input {
+                                        border-radius: 5px;
+                                        height: 25px;
+                                        padding-left: 10px;
+                                        caret-color: #5C469C;
+
+                                    }
+                                }
+                            }
+
+                            .div-file-wrapper {
+                                display: flex;
+                                margin-top: 10px;
+
+                                .div-files {
+                                    input {
+                                        border-radius: 5px;
+                                        height: 25px;
+                                        cursor: pointer;
+
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .card-footer {
+                height: 10%;
+                background-color: rgba(0, 0, 0, 0.1);
+
+
+                .div-footer {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 10px;
+                    align-items: center;
+                    padding-right: 15px;
+
+                    button {
+                        border-radius: 20px;
+                        height: 40px;
+                        background-color: white;
+                        cursor: pointer;
+
+                    }
+
+                    .button {
+                        width: 150px;
+                        border-color: green;
+                        color: green;
+
+                        &:hover {
+                            background-color: green;
+                            color: white;
+                        }
+
+                    }
+
+                    .button-1 {
+                        width: 70px;
+                        border-color: red;
+                        color: red;
+
+                        &:hover {
+                            background-color: red;
+                            color: white;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+}

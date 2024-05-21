@@ -1,0 +1,25 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html, body{
+    
+        background-image: url('../assets\img/Um_background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: Arial, sans-serif;
+        /* fallback font */
+    }
+
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #fff;
+    --third-color: rgba(9, 60, 89, 1);
+    
+}
+
+.dark-mode {
+    --primary-color: #111010;
+    --secondary-color: #fff;
+}
