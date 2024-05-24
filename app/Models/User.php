@@ -17,9 +17,15 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'firstname',
+        'lastname',
+        'username',
+        'birthdate',
+        'gender',
         'email',
         'password',
+        
+
     ];
 
     /**
@@ -41,7 +47,18 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
-            'password' => 'hashed',
+            'password' => 'hashed', 
+            'birthdate' => 'date',
         ];
     }
+    public function sentDocuments()
+    {
+        return $this->hasMany(Document::class, 'sender_user_id');
+    }
+
+    public function receivedDocuments()
+    {
+        return $this->hasMany(Document::class, 'receiver_user_id');
+    }
+
 }

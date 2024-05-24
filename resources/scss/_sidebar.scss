@@ -1,0 +1,100 @@
+/* sidebar css codes */
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom:0;   
+        left: 0;
+        width: 230px;
+        background-color: var(--third-color);
+        display: flex;
+        padding:10px 0;
+
+        .container-flex-sidebar {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0 10px;
+            align-items: center;
+
+            .image-text {
+                display: flex;
+
+                img {
+                    width: 150px;
+                    height: 130px;
+                    align-self: center;
+                }
+            }
+
+            .menu-bar {
+
+                a {
+                    font-size: 18px;
+                    text-decoration: none;
+                    color: #fff;
+                    .list{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 5px;
+                    }
+                    .list2{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
+                }
+                .compose-Container {
+                    display: flex;
+                    align-items: left;
+                    flex-direction: column;
+                    padding: 20px;
+                    align-self: flex-start;
+                    flex-grow: 1;
+                    a{
+                        .list{
+                            span{
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                }
+                .compose-Container:hover{
+                    scale: 1.1;
+                }
+                .compose-Container.active {
+                    background-color: rgba(110,56,224,1);
+                    border-radius: 25px;
+                    
+                }
+                .link-Container {
+                    display: flex;
+                    align-items: left;
+                    flex-direction: column;
+                    padding: 20px;
+                    align-self: flex-start;
+                    flex-grow: 1;
+
+                    a {
+                        padding: 10px 0;
+                    }
+                    a:hover{
+                        scale: 1.25;
+                        color: rgb(117, 186, 229);
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+

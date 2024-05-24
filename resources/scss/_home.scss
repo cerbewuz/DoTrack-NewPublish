@@ -1,0 +1,161 @@
+.wrapper-main-2 {
+
+    .content {
+
+        padding-left: 230px;
+        padding-top: 75px;
+        height: 100%;
+
+        .home-table {
+            display: flex;
+            flex-grow: 1;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            
+
+
+
+            .box-table {
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+                margin: 20px;
+
+                .body {
+
+                    .abc {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+
+                        h1 {
+                            display: flex;
+
+                        }
+
+
+                    }
+
+                    h3 {
+                        padding: 10px;
+                        text-align: center;
+                        font-size: 18px;
+                    }
+                }
+
+                .footer {
+                    display: flex;
+                    justify-content: flex-end;
+                    background-color: rgba(130, 120, 120, 0.555);
+
+                    .chevron {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                }
+
+            }
+
+            .B {
+                background-color: rgba(49, 110, 215, 0.2);
+                display: flex;
+
+                .body {}
+
+                .footer {
+                    display: flex;
+
+
+                    .chevron {
+                        display: flex;
+                        align-items: center;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                }
+
+            }
+
+            .Y {
+                background-color: rgba(255, 255, 0, 0.512);
+                display: flex;
+
+                .body {}
+
+                .footer {
+                    display: flex;
+
+
+                    .chevron {
+                        display: flex;
+                        align-items: center;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                }
+
+            }
+
+            .G {
+                background-color: rgba(48, 232, 48, 0.392);
+                display: flex;
+
+                .body {}
+
+                .footer {
+                    display: flex;
+
+
+                    .chevron {
+                        display: flex;
+                        align-items: center;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+            .R {
+                background-color: rgb(218, 112, 112);
+                display: flex;
+
+                .body {}
+
+                .footer {
+                    display: flex;
+
+
+                    .chevron {
+                        display: flex;
+                        align-items: center;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
