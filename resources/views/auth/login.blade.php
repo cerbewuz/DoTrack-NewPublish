@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In - DoTrack</title>
-    <link rel="icon" href="../assets/scss/loo.png">
+    <link rel="icon" href="../assets/img/doctracklogo.png">
     <link rel="stylesheet" href="../app/css/styles.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -24,13 +24,15 @@
     </script>
 </head>
 
-<body background="../assets/img/Um_background.png">
+<body style="background-image: url('../assets/img/Um_background.png')">
     <div class="wrapper-main">
         <div class="wrapper">
             <form method="post" class="form" action="{{ route('login.store') }}">
                 @csrf
                 <div class="logoimg">
-                    <img src="../assets/img/doctracklogo.png">
+                    <a href="{{route('login')}}">
+                        <img src="../assets/img/doctracklogo.png">
+                    </a>
                 </div>
                 <h1>Login</h1>
 
@@ -49,7 +51,7 @@
 
                 <div class="remember-forgot">
                     <label><input type="checkbox">Remember me</label>
-                    <a href="../assets/img/forgotpass.png">Forgot password?</a>
+                    <a href="{{route('password.request')}}">Forgot password?</a>
                 </div>
                 <button type="submit" class="button">Login</button>
                 <div class="register-link">

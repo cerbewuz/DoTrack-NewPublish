@@ -78,7 +78,7 @@
                 </div>
                 <div class="profile-button">
                     <img src="{{ asset('assets/img/sam.png') }}" alt="Profile Picture" class="profile-pic">
-                    <span class="name" id="name"><strong>{{$employee_name}}</strong></span>
+                    <span class="name" id="name"><strong>{{$employee->firstname}}</strong></span>
                     <div class="dropdown-menu">
                         <a href="{{ route('admin.profile') }}">Profile</a>
                         <a href="#" id="dark-mode-toggle">Dark mode</a>

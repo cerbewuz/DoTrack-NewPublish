@@ -13,8 +13,8 @@ class DepartmentsController extends Controller
     $documents = Department::create([
         "department_name"=> $request->department_name,
     ]);
-
-    return view(route("admin.home", absolute:false));
-    }
+   
     
+    }
+   
 }

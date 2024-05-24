@@ -11,6 +11,7 @@ use App\Models\Subclassification;
 use App\Models\Prioritization;
 use App\Models\Action;
 use App\Models\Classification;
+use App\Models\User;
 
 class EmployeeHomeController extends Controller
 {
@@ -24,23 +25,18 @@ class EmployeeHomeController extends Controller
     // for compose page
     public function compose()
     {
-        $employee_name = Auth::check() && Auth::user()->usertype == 0 ? Auth::user()->username : null;
-        $subclassifications = Subclassification::all();
-        $prioritizations = Prioritization::all();
-        $actions = Action::all();
-        $classifications = Classification::all();
-
-        return view(
-            "employee.compose",
-            compact(
-                'employee_name',
-                "subclassifications",
-                "actions",
-                "prioritizations",
-                "classifications"
-            )
-        );
+    
+        $users = User::all(); 
+        $prioritizations = Prioritization::all(); 
+        $classifications = Classification::all(); 
+        $subclassifications = Subclassification::all(); 
+        $actions = Action::all(); 
+    
+        $employee_name = Auth::user()->username; 
+    
+        return view('employee.compose', compact('users', 'prioritizations', 'classifications', 'subclassifications', 'actions', 'employee_name'));
     }
+    
 
     public function incoming()
     {

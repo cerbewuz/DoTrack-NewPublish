@@ -12,11 +12,10 @@ return new class extends Migration {
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
             $table->integer('document_id')->unique();
-            $table->string('status')->default('outgoing');
+            $table->string('status')->default('outgoing'); // sender side  
+            $table->string('status2')->default('incoming'); // receiver side
             $table->unsignedBigInteger('sender_user_id');
             $table->unsignedBigInteger('receiver_user_id');
-            $table->string('from');
-            $table->string('to');
             $table->string('subject');
             $table->text('description');
             $table->string('prioritization');

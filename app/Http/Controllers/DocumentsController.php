@@ -24,24 +24,14 @@ class DocumentsController extends Controller
     {
 
         // Log::info('Store method called with data: ', $request->all());
-        $request->validate([
-            'sender_user_id' => 'required|exists:users,id',
-            'receiver_user_id' => 'required|exists:users,id',
-            'subject' => 'required',
-            'description' => 'required',
-            'prioritization' => 'required',
-            'classification' => 'required',
-            'subclassification' => 'required',
-            'action' => 'required',
-            'file' => 'required',
-            'deadline' => 'required',
-        ]);
+        
 
         $document = new Document; 
         $document->document_id = $this->random();
         $document->status = $request->status ?? 'outgoing';
-        $document->sender_user_id = $request->input('sender_user_id');
-        $document->receiver_user_id = $request->input('receiver_user_id');
+        $document->status2 = $request->status2 ?? 'incoming';
+        $document->sender_user_id = $request->sender_user_id;
+        $document->receiver_user_id = $request->receiver_user_id;
         $document->subject = $request->subject;
         $document->description = $request->description;
         $document->prioritization = $request->prioritization;
@@ -57,6 +47,7 @@ class DocumentsController extends Controller
         }
 
         $document->deadline = $request->deadline;
+        Log::info($document);
         $document->save();
 
         return redirect()->back();

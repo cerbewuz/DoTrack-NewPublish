@@ -12,7 +12,7 @@
     <link rel="icon" href="../assets/img/doctracklogo.png">
 </head>
 
-<body background="../assets/img/Um_background.png">
+<body style="background-image: url('../assets/img/Um_background.png')">
 
     <div class="wrapper-main-1">
         <div class="Signup">

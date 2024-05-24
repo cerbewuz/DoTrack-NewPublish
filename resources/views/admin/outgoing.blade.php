@@ -104,44 +104,68 @@
 
         <div class="content">
 
-            <div class="table-container">
-                <div class="table">
+<div class="table-container">
+    <div class="table">
 
-                    <div class="incoming-footer-head">
-                        <div class="chevron">
-                            <ul>
-                                <li><a href="#"><span class="material-symbols-outlined">
-                                    chevron_left
-                                </span>
+        <div class="incoming-footer-head">
+            <div class="chevron">
+                <ul>
+                    <li><a href="#"><span class="material-symbols-outlined">
+                        chevron_left
+                    </span>
 
-                                </a></li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href=""><span class="material-symbols-outlined">
-                                        chevron_right
-                                    </span></a></li>
-                            </ul>
-                        </div>
+                    </a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href=""><span class="material-symbols-outlined">
+                            chevron_right
+                        </span></a></li>
+                </ul>
+            </div>
 
-                    </div> 
-                    <div class="incoming-header">
-                        <div class="table-row">
-                            <div class="table-cell">Type</div>
-                            <div class="table-cell">Sender</div>
-                            <div class="table-cell">Details</div>
-                            <div class="table-cell">Required Action</div>
-                            <div class="table-cell">Date & Time Posted</div>
-                            <div class="table-cell">Status</div>
-                            <div class="table-cell">Action</div>
+        </div> 
+        <div class="incoming-header">
+            <div class="table-row">
+                <div class="table-cell">Type</div>
+                <div class="table-cell">ID</div>
+                <div class="table-cell">Details</div>
+                <div class="table-cell">Required Action</div>
+                <div class="table-cell">Date & Time Created</div>
+                <div class="table-cell">Deadline</div>
+                <div class="table-cell">Action</div>
 
 
-                        </div>
-                    </div>
-                    
+            </div>
         </div>
+         @foreach ($documents as $document)
+        <div class="incoming-body">
+           
+            <div class="table-row">
+                <div class="table-cell"><strong>Type</strong></div>
+                <div class="table-cell">{{$document->document_id}}</div>
+                <div class="table-cell">{{$document->subject}} <br> {{$document->description}}</div>
+                <div class="table-cell">{{$document->action}}</div>
+                <div class="table-cell">{{$document->created_at}}</div>
+                <div class="table-cell">{{$document->deadline}}</div>
+                <div class="table-cell">
+                <button class="table-cell" onclick="toggleDropdown({{ $document->id }})">Actions</button>
+                 <div class="dropdown-menu" id="dropdown-menu-{{ $document->id }}">
+                 <a class="dropdown-item" href="{{ route('admin.view-document', $document->id) }}" onclick="openDialog({{ $document->id }})">View Document</a>
+                <a class="dropdown-item" href="{{ route('documents.moveToPending', $document->id) }}">Move to Pending</a>
+                <a class="dropdown-item" href="{{ route('documents.moveToArchive', $document->id) }}">Move to Archive</a>
+                </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+           @endforeach 
+        </div>
+
+
+</div>
         <script src="../js/logout-darkmode.js"></script>
         <script src="../js/script.js"></script>
 

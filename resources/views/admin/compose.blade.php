@@ -75,7 +75,7 @@
 
         <div class="modalwrapper">
             <div class="card-white">
-                <form method="POST" action="{{ route('admin.compose') }}" class="card-white-flex">
+                <form method="POST" action="{{ route('admin.compose.store') }}" class="card-white-flex" enctype="multipart/form-data">
                     @csrf
                     <div class="card-heading">
                         <div class="heading-compose">
@@ -91,7 +91,7 @@
                                     <div class="div-send">
                                         <div class="from">
                                             <label for="from">From:</label>
-                                            <input type="text" name="sender" value="{{ Auth::user()->email }}" disabled>
+                                            <input type="text" value="{{ Auth::user()->email }}" readonly>
                                             <input type="hidden" name="sender_user_id" value="{{ Auth::user()->id }}">
                                         </div>
 
@@ -148,7 +148,7 @@
                                     <div class="div-file-categ-1">
                                         <div class="div-file-1">
                                             <label for="sub_classification">Sub-Classification:</label>
-                                            <select name="sub_classification" id="sub_classification">
+                                            <select name="subclassification" id="sub_classification">
                                                 <option disabled selected>Select Type</option>
                                                 @foreach ($subclassifications as $subclassification)
                                                     <option value="{{ $subclassification->id }}">{{ $subclassification->name }}</option>
@@ -218,9 +218,7 @@
                 </div>
                 </div>
                 </div>
-        <div class="content">
-
-        </div>
+       
 
         <script src="../js/logout-darkmode.js"></script>
         <script src="../js/script.js"></script>

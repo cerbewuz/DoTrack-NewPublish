@@ -86,7 +86,7 @@
 
                 <div class="profile-button">
             <img src="../assets/img/sam.png" alt="Profile Picture" class="profile-pic">
-            <span class="name" id="name"><strong>{{$employee->firstname}}</strong></span>
+            <span class="name" id="name"><strong>{{$employee_name}}</strong></span>
             <div class="dropdown-menu">
                 <a href="{{route('admin.profile')}}">Profile</a>
                 <a href="#" id="dark-mode-toggle">Dark mode</a>
@@ -140,12 +140,12 @@
 
                         </div>
                     </div>
-                     @foreach ($documents as $document)
+                     
                     <div class="incoming-body">
-                       
+                    @foreach ($documents as $document)
                         <div class="table-row">
                             <div class="table-cell"><strong>Type</strong></div>
-                            <div class="table-cell">{{$document->documents_id}}</div>
+                            <div class="table-cell">{{$document->document_id}}</div>
                             <div class="table-cell">{{$document->subject}} <br> {{$document->description}}</div>
                             <div class="table-cell">{{$document->action}}</div>
                             <div class="table-cell">{{$document->created_at}}</div>
@@ -153,16 +153,15 @@
                             <div class="table-cell">
                             <button class="table-cell" onclick="toggleDropdown({{ $document->id }})">Actions</button>
                              <div class="dropdown-menu" id="dropdown-menu-{{ $document->id }}">
-                             <a class="dropdown-item" href="{{ route('employee.view-document', $document->id) }}" onclick="openDialog({{ $document->id }})">View Document</a>
-                            <a class="dropdown-item" href="{{ route('documents.moveToPending', $document->id) }}">Move to Pending</a>
-                            <a class="dropdown-item" href="{{ route('documents.moveToArchive', $document->id) }}">Move to Archive</a>
-                            </div>
-                            </div>
-                                </div>
+                                <a class="dropdown-item" href="{{ route('employee.view-document', $document->id) }}" onclick="openDialog({{ $document->id }})">View Document</a>
+                                <a class="dropdown-item" href="{{ route('documents.moveToPending', $document->id) }}">Move to Pending</a>
+                                <a class="dropdown-item" href="{{ route('documents.moveToArchive', $document->id) }}">Move to Archive</a>
                             </div>
                         </div>
-                       @endforeach 
+                       
+                     
                     </div>
+                    @endforeach 
     
 
         </div>

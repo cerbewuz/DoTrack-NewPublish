@@ -59,7 +59,8 @@ Route::middleware(['auth', 'verified', 'admin'])->group(function () {
     Route::get('admin/outgoing', [HomeController::class, 'outgoing'])->name('admin.outgoing');
     Route::get('admin/pending', [HomeController::class, 'pending'])->name('admin.pending');
     Route::get('admin/archive', [HomeController::class, 'archive'])->name('admin.archive');
-    Route::post('admin/compose', [DocumentsController::class, 'store'])->name('admin.compose');
+    Route::post('admin/compose', [DocumentsController::class, 'store'])->name('admin.compose.store');
+    Route::get('admin/view-document/{document}', [DocumentsController::class, 'viewDocument'])->name('admin.view-document');
 });
 
 // For Employee Authentication   
@@ -72,6 +73,6 @@ Route::middleware(['auth', 'verified', 'employee'])->group(function () {
     Route::get('employee/outgoing', [EmployeeHomeController::class, 'outgoing'])->name('employee.outgoing');
     Route::get('employee/pending', [EmployeeHomeController::class, 'pending'])->name('employee.pending');
     Route::get('employee/archive', [EmployeeHomeController::class, 'archive'])->name('employee.archive');
-    Route::post('employee/compose', [DocumentsController::class, 'store'])->name('compose.store');
-   
+    Route::post('employee/compose', [DocumentsController::class, 'store'])->name('employee.compose.store');
+    Route::get('employee/view-document/{document}', [DocumentsController::class, 'viewDocument'])->name('employee.view-document');
 });
